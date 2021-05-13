@@ -1,49 +1,22 @@
 // 1일차
-console.log('Im Working. Im JS. Im Beautiful. Im worth it');
+//console.log('Im Working. Im JS. Im Beautiful. Im worth it');
 
-// 2일차
-const a = 221;
-let b = a - 5;
-// a = 4;
-console.log(b, a);
+// 3일차
+// HTML을 DOM형태로 바꾸기
 
-const what1 = "Hello😙"; //String
-console.log(what1);
+//const title = document.getElementById("title");
+const title = document.querySelector("#title"); // id 찾기
+title.innerHTML = "Hi! From JS";
+title.style.color = "blue";
 
-const what2 = true; // Boolean
-const what3 = 666; //Number
-const what4 = 55.1; //float
+// console.dir(title);
 
-const monday = "Mon";
-const tue = "Tue";
-const wed = "Wed";
-const thu = "Thu";
-const fri = "Fri"; 
+document.title = "Title";
 
-console.log(monday, tue, wed, thu, fri);
-
-const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-console.log(daysOfWeek);
-console.log(daysOfWeek[2]);
-
-const Info = {
-    name : "Nico",
-    age : 33,
-    gender : "Male",
-    isHandsome : true,
-    favMovies : ["Along the gods", "LOTR", "Oldboy"],
-    favFood : [
-        {
-            name:"Kimchi",
-             fatty : false
-        },
-        {
-            name:"Cheese burger",
-             fatty:true
-        }
-    ]
+// #2.4 이벤트
+function handleResize(){
+    title.style.color = "green";
 }
-console.log(Info);
-console.log(Info.age);
-Info.gender = "Female";
-console.log(Info.gender);
+title.addEventListener("click", handleResize);
+//handleResize => 윈도우 사이즈가 변경될 때 호출
+// handleResize => 지금 호출
